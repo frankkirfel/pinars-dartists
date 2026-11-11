@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Darts Doppel-KO – Teilnehmer</title><link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/participants.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="participants.html">DOUBLE<span>OUT</span></a>
+    <nav><a class="active" href="participants.html">Teilnehmer</a><a href="matches.html">Spiele</a><a href="brackets.html">Turnierbaum</a><a href="results.html">Ergebnisse</a></nav>
+  </header>
+  <main class="container">
+    <section class="hero"><div><p class="eyebrow">TURNIER-MANAGER</p><h1>Teilnehmer</h1><p class="muted">Stelle dein Feld zusammen und starte anschließend die Auslosung.</p></div>
+      <div class="hero-stat"><strong id="participantCount">0 / 64</strong><span>Teilnehmer</span></div></section>
+    <section class="panel">
+      <h2>Teilnehmer hinzufügen</h2>
+      <div class="form-row"><label class="grow">Vorhandene Spieler<select id="knownParticipant"><option value="">Spieler auswählen …</option></select></label>
+        <button id="addKnown" class="button secondary">Hinzufügen</button></div>
+      <div class="form-row"><label class="grow">Neuer Spieler<input id="newParticipant" type="text" maxlength="40" placeholder="Name eingeben"></label>
+        <button id="addNew" class="button">Speichern & hinzufügen</button></div>
+      <!-- <p class="hint">Die Vorschlagsliste kommt aus <code>js/participants.js</code>. Eigene Namen werden nur lokal in diesem Browser gespeichert.</p> -->
+    </section>
+    <section class="panel">
+      <div class="section-head"><h2>Aktuelles Teilnehmerfeld</h2><button id="clearParticipants" class="text-button danger">Alle entfernen</button></div>
+      <ol id="participantList" class="participant-list"></ol>
+      <div id="emptyParticipants" class="empty-state">Noch keine Teilnehmer hinzugefügt.</div>
+    </section>
+    <section class="panel draw-panel">
+      <div><h2>Turnier auslosen</h2><p class="muted">Doppel-KO · bis zu 64 Spieler · Set-Modus Best of 3</p></div>
+      <button id="drawTournament" class="button large">Auslosung starten <span>→</span></button>
+    </section>
+    <div id="notice" class="notice" role="status" aria-live="polite"></div>
+  </main>
+  <footer>DOUBLEOUT <span>·</span> Lokale Speicherung via LocalStorage</footer>
+</body></html>
